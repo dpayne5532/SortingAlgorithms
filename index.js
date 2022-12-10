@@ -38,15 +38,35 @@ function bubbleSort(arr) {
 
 function selectionSort(arr) {
   for (var i = 0; i < arr.length; i++) {
-    var min = i;
+    var lowest = i;
     for (var j = i + 1; j < arr.length; j++) {
-      if (arr[j] < arr[min]) {
-        swap(arr, min, j)
+      if (arr[j] < arr[lowest]) {
+        swap(arr, lowest, j)
       }
     }   
   }
   return arr;
 }
-console.log(selectionSort(arr));
+// console.log(selectionSort(arr));
 
-// =================================================
+// ==========COLES=SELECTION=SORT======================
+
+function selSort(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    var lowest = i;
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[lowest]) {
+        lowest = j;
+      }
+    }
+    if (i !== lowest) {
+      // var temp = arr[i];
+      // arr[i] = arr[lowest];
+      // arr[lowest] = temp;
+      swap(arr, i, lowest)
+    }
+  }
+  return arr;
+}
+
+console.log(selSort(arr));
