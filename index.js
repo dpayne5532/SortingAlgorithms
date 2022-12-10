@@ -6,6 +6,7 @@ var arr2 = [1, 2, 3, 4, 5, 6, 7]
 function bubbleSort(arr) {
   var noSwaps = true;
   for (var i = arr.length; i > 0; i--) {
+    noSwaps = true;
     for (var j = 0; j < i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         swap(arr, j, j + 1)
