@@ -1,5 +1,3 @@
-
-
 var arr = [5, 1, 24, 64, 43, 123, 11, 22, 55, 76, 34, 21, 12, 35, 121, 45];
 var arr2 = [1, 2, 3, 4, 5, 2, 6, 7]
 
@@ -11,8 +9,7 @@ function swap(arr, idx1, idx2) {
   arr[idx2] = temp;
 }
 
-// ========Bubble=Sort============================
-
+// ========BUBBLE=SORT=============================
 
 function bubbleSort(arr) {
   var noSwaps = true;
@@ -31,19 +28,21 @@ function bubbleSort(arr) {
   return arr;
 }
 
-// bubbleSort(arr);
+// console.log(bubbleSort(arr));
 
-// ==============================SELECTION=SORT==========================
+// =========SELECTION=SORT==========================
 
 function selectionSort(arr) {
-  var min = arr[0];
-  for (var i = 1; i < arr.length; i++) {
-    if (arr[i] < min) {
-      
-    }
+  for (var i = 0; i < arr.length; i++) {
+    var min = i;
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        swap(arr, min, j)
+      }
+    }   
   }
+  return arr;
 }
+console.log(selectionSort(arr));
 
-
-
-
+// =================================================
