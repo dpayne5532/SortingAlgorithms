@@ -1,3 +1,7 @@
+// https://www.toptal.com/developers/sorting-algorithms
+// https://visualgo.net/en/sorting
+
+
 var arr = [5, 1, 24, 64, 43, 123, 11, 22, 55, 76, 34, 21, 12, 35, 121, 45];
 var arr2 = [1, 2, 3, 4, 5, 2, 6, 7]
 
